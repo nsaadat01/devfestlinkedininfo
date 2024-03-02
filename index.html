@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSV Data</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="header">
+    <div class="container" id="filter-container">
+        <button type="button" class="filter-btn" onclick="filterEntries('Software Engineer')">Software Engineer</button>
+        <button type="button" class="filter-btn" onclick="filterEntries('VP')">VP</button>
+        <button type="button" class="filter-btn" onclick="filterEntries('Recruiter')">Recruiter</button>
+        <button type="button" class="filter-btn" onclick="filterEntries('Director')">Director</button>
+        <button type="button" class="filter-btn" onclick="displayAllEntries()">Clear Filters</button>
+    </div>
+  </div>
+
+  <div class="container" id="main-container">
+    <!-- Main content will be dynamically populated here -->
+  </div>
+
+  <div class="container" id="entry-container" style="display: none;">
+    <!-- Individual entry content will be dynamically populated here -->
+    <button onclick="goBack()">Back</button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
